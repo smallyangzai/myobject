@@ -1,0 +1,21 @@
+module.exports = {
+    devServer:{
+        proxy:{
+            "/api":{
+                target:"",
+                changeOrigin:true
+            }
+        }
+    },
+    configureWebpack:{//配置项
+        resolve:{//别名配置
+            alias:{
+                "@":Path2D.resolve(__dirname,"./src"),
+                "@common":Path2D.resolve(__dirname,"./src/common"),
+                "@api":Path2D.resolve(__dirname,"./src/api"),
+                "@components":Path2D.resolve(__dirname,"./src/components"),
+                "@utils":Path2D.resolve(__dirname,"./src/utils")
+            }
+        }
+    }
+}

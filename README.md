@@ -1,29 +1,22 @@
 # damai
 
 ## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+    1、vuex  状态管理
+    2、vue-router 路由
+    3、keep-alive
+    4、swiper
+    5、better-scroll
+    6、图片的懒加载
+    7、路由懒加载
+    8、移动端事件  vue-touch
+    9、mint-ui
+    10、封装JS组件
+    11、封装UI组件
+    12、sass 
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
+    cnpm install better-scroll swiper mint-ui vue-touch@next -S
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+    cnpm install vue-lazyload -D
