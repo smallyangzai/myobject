@@ -1,8 +1,9 @@
+const Path = require(id:"path")
 module.exports = {
     devServer:{
         proxy:{
             "/api":{
-                target:"",
+                target:"http://baidu.com",
                 changeOrigin:true
             }
         }
@@ -10,11 +11,12 @@ module.exports = {
     configureWebpack:{//配置项
         resolve:{//别名配置
             alias:{
-                "@":Path2D.resolve(__dirname,"./src"),
-                "@common":Path2D.resolve(__dirname,"./src/common"),
-                "@api":Path2D.resolve(__dirname,"./src/api"),
-                "@components":Path2D.resolve(__dirname,"./src/components"),
-                "@utils":Path2D.resolve(__dirname,"./src/utils")
+                "@":Path.resolve(__dirname,"./src"),
+                "@common":Path.resolve(__dirname,"./src/common"),
+                "@api":Path.resolve(__dirname,"./src/api"),
+                "@components":Path.resolve(__dirname,"./src/components"),
+                "@utils":Path.resolve(__dirname,"./src/utils"),
+                "@views":Path.resolve(__dirname,"./src/views") //__dirname  是一个绝对路径
             }
         }
     }

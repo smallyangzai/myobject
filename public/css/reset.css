@@ -4,7 +4,10 @@ html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, l
 
 fieldset, c{ border:none; }
 
-img{display: block;}
+img{display: block;border: none}
+
+
+i,em{font-style: normal;}
 
 address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
 
