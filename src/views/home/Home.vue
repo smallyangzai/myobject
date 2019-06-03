@@ -1,9 +1,10 @@
 <template>
-    <div class="head">
+<div class="contoner">
+    
         <div class="hom">
             <ul>
                 <router-link v-for="(item,index) in citys" :key="index" tag="li" class="hom_position" :to="item.path">
-                    <span class="iconfont" v-html="item.icon"></span>全国
+                    <span class="iconfont" v-html="item.icon"></span><i>全国</i>
                 </router-link>
                 <li class="hom_search">
                     <span class="iconfont">&#xe60d;</span>
@@ -13,14 +14,22 @@
                     <span class="iconfont" v-html="item.icon"></span>
                 </router-link>
             </ul>
+        
         </div>
-        <div>
-            {{}}
-        </div>
-    </div>
+        <van-swipe :autoplay="3000">
+            <van-swipe-item v-for="(item, index) in images" :key="index">
+                <img v-lazy="item"/>
+            </van-swipe-item>
+        </van-swipe>
+</div>
 </template>
 
 <script>
+import Vue from "vue";
+import { Swipe, SwipeItem } from 'vant';
+
+Vue.use(Swipe).use(SwipeItem);
+
 export default {
     name:'Home',
     data(){
@@ -36,6 +45,11 @@ export default {
                     icon:"&#xe672;",
                     path:"./city",
                 }
+            ],
+            images: [
+                '/src/common/img/lun2.webp',
+                '/src/common/img/lun2.webp',
+                '/src/common/img/lun2.webp',
             ]
         }
     }
@@ -52,6 +66,7 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
+    overflow: hidden;
 }
 .hom ul{
     display: flex;
@@ -70,11 +85,16 @@ export default {
     font-size: .35rem;
     padding-right: .1rem;
 }
+.hom_position i{
+    font-size: .31rem;
+    font-weight: 530;
+}
 .hom_search{
-    border-radius: 20px;
+    border-radius: 100px;
     background: #fff;
     margin-left: .4rem;
     width: 4.5rem;
+    height:0.3rem;
 }
 .hom_search span{
     font-size: .3rem;
@@ -90,8 +110,14 @@ export default {
     padding-left: .2rem;
 }
 .hom_mine span{
-    font-size: .5rem;
+    font-size: .4rem;
     margin-left: .3rem;
     font-weight: 600;
+}
+.contoner{
+    overflow: hidden;
+}
+.van-swipe{
+    margin-top: 1rem
 }
 </style>

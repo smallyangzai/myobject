@@ -1,4 +1,4 @@
-const Path = require(id:"path")
+const Path = require("path")
 module.exports = {
     devServer:{
         proxy:{
