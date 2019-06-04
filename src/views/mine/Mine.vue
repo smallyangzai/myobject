@@ -132,12 +132,13 @@ export default {
 /* list */
 .my_list{
     background: #f3f3f3;
-    overflow: hidden;
     margin-top: 2rem;
+    overflow: scroll;
+    height: 10rem;
 }
 .list_one{
     display: flex;
-    font-size: .27rem;
+    font-size: .28rem;
     color: #666;
     flex-direction: column;
     background: #fff;
@@ -145,12 +146,14 @@ export default {
 }
 .list_two{
     background: #fff;
+    font-size: .28rem;
     margin-top: .27rem;
     color: #666;
 }
 .list_three{
     background: #fff;
     margin-top: .27rem;
+    font-size: .28rem;
     color: #666;
 }
 .my_list li{
@@ -167,7 +170,7 @@ export default {
 }
 .my_list li i{
     padding-left: .2rem;
-    width: 1.5rem;
+    width: 1.7rem;
 }
 .my_list li div{
     float: right;

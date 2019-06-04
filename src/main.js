@@ -1,17 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Mint from 'mint-ui'
 import router from './router'
 import store from './store'
-import Vant from 'vant'
-import 'vant/lib/index.css'
+import 'mint-ui/lib/style.css'
 
-Vue.use(Vant);
-
+Vue.use(Mint);
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
-  Vant,
   render: h => h(App)
 }).$mount('#app')
